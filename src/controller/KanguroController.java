@@ -7,6 +7,7 @@ public class KanguroController extends Thread {
 	
 	private int trackLength;
 	private String name;
+	private static int position;
 	
 	public KanguroController(int trackLength, String name){
 		this.trackLength = trackLength;
@@ -27,23 +28,14 @@ public class KanguroController extends Thread {
 			sum += jump;
 			System.out.println(name + " pulou " + jump + " metros \nTotal percorrido: " + sum + " metros\n");
 		}
-		
-		System.out.print(toString() + " chegou!\n" );
+		position++;
+		System.out.print(
+				"************************************\n" 
+				+ position + " posição: " + name +
+				" chegou!\n" + 
+				"************************************\n"
+		);
 	}
 
-
-
-
-	@Override
-	public String toString() {
-		return name;
-	}
-
-
-
-
-	
-	
-	
 
 }

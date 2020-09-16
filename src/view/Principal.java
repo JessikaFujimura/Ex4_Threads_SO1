@@ -12,7 +12,7 @@ public class Principal {
 			Thread kanguro = new KanguroController(30, names[i]);
 			kanguro.start();
 		}
-		
 	}
+	
 
 }
